@@ -1,15 +1,13 @@
 {
   "files": {
-    "main.css": "/website/static/css/main.e6e4926c.css",
+    "main.css": "/website/static/css/main.6d574329.css",
     "main.js": "/website/static/js/main.a56f603b.js",
-    "static/media/site_background.jpg": "/website/static/media/site_background.97f87573dd442720ac58.jpg",
-    "static/media/pricedow.ttf": "/website/static/media/pricedow.be35fa7aeef631d1e307.ttf",
     "index.html": "/website/index.html",
-    "main.e6e4926c.css.map": "/website/static/css/main.e6e4926c.css.map",
+    "main.6d574329.css.map": "/website/static/css/main.6d574329.css.map",
     "main.a56f603b.js.map": "/website/static/js/main.a56f603b.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6e4926c.css",
+    "static/css/main.6d574329.css",
     "static/js/main.a56f603b.js"
   ]
 }
