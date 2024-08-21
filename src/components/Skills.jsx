@@ -11,6 +11,7 @@ const skills = [
   { name: 'Git', icon: 'https://img.icons8.com/color/48/git.png' },
   { name: 'HTML', icon: 'https://img.icons8.com/color/48/html-5.png' },
   { name: 'CSS', icon: 'https://img.icons8.com/color/48/css3.png' }
+  { name: 'Bootstrap', icon: 'https://img.icons8.com/color/48/bootstrap.png' }
 ];
 
 const Skills = () => {
