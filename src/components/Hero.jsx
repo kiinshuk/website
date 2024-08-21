@@ -16,7 +16,7 @@ const Hero = () => {
         <div className='buttn'>
         <a href="#contact" className="btn btn-primary">Hire me!</a>
 
-        <a href="/resume.pdf" download="Kinshuk_Sharma_Resume.pdf" className="btn btn-primary">
+        <a href="/resume-20-08-2024.pdf" download="Kinshuk_Sharma_Resume.pdf" className="btn btn-primary">
             Download my CV
           </a>
         </div>
