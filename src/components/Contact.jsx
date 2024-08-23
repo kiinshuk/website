@@ -24,9 +24,9 @@ const Contact = () => {
         }
       };
   return (
-<div id="contact" class="contact">
+<div id="contact" className="contact">
   <h2>Contact Me</h2>
-  <form class="contact-form" onSubmit={onSubmit}>
+  <form className="contact-form" onSubmit={onSubmit}>
     <input type="text" name="name" placeholder="Your Name" required />
     <input type="email" name="email" placeholder="Your Email" required />
     <input type="text" name="subject" placeholder="Subject" required />
