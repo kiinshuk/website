@@ -7,7 +7,7 @@ const Hero = () => {
 
   return (
     <div className='hero'>
-      <div className='centered'>
+      
         <h1>Front-End React Developer</h1>
         <p>
           Hi, I am <span className="name">Kinshuk</span>, a self-taught 
@@ -29,7 +29,7 @@ const Hero = () => {
           </a>
         </div>
       </div>
-    </div>
+    
   );
 }
 
