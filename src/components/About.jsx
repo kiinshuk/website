@@ -3,8 +3,8 @@ import '../App.css';
 
 const experiences = [
   {
-    title: "Front-End Developer Intern - Analytics Jobs",
-    description: "Developed and maintained the front-end of a job analytics platform using React.js and Bootstrap. Worked closely with the design team to implement responsive web designs."
+    title: "Software Engineer Intern - Katha Infocom Pvt Ltd",
+    description: `Focused on front-end development using <span class="technology">React.js</span> and <span class="technology">Tailwind CSS</span> to enhance web applications.`
   }
 ];
 
@@ -19,7 +19,7 @@ const About = () => {
     <div className="about">
       <h2>About Me</h2>
       <p>
-      Hello! I'm Kinshuk Sharma, a self-taught web developer with a strong focus on crafting responsive and visually appealing user interfaces. Currently, I'm pursuing my B.Tech in Computer Science at Jaipur National University, where I've honed my skills in React.js, Tailwind CSS, and JavaScript. My journey in web development has been driven by a passion for learning and creating impactful projects.
+        Hi, I'm Kinshuk Sharma, a passionate web developer specializing in responsive and visually appealing UIs. With expertise in <span className="technology">React.js</span>, <span className="technology">Tailwind CSS</span>, and JavaScript, I strive to create impactful web experiences.
       </p>
       <h2>Experience</h2>
       {experiences.map((experience, index) => (
@@ -29,19 +29,16 @@ const About = () => {
           onClick={() => toggleExperience(index)}
         >
           <div className="experience-title">
-          Software Engineer Intern
+            {experience.title}
             <span className="toggle-icon">
               {activeIndex === index ? '▲' : '▼'}
             </span>
-          </div >
+          </div>
           <div className="experience-description">
             <div className='exp'>
-          <p className='comp'>Katha Infocom Pvt Ltd, Advertising Services, Kochi, Kerala</p>
-          <p className='period'>Jan,24 to Jun,24</p>
-          </div>
-          <p>
-              As a Software Engineer Intern at Katha Infocom, I primarily focused on front-end development using React.js and Tailwind CSS. During my tenure, I was responsible for designing and implementing user interfaces that significantly enhanced the visual appeal and functionality of various web applications. This experience not only allowed me to refine my skills in creating responsive, high-performance interfaces but also deepened my understanding of modern web development practices.
-          </p>
+              <p className='period'>Jan '24 - Jun '24</p>
+            </div>
+            <p dangerouslySetInnerHTML={{ __html: experience.description }}></p>
           </div>
         </div>
       ))}

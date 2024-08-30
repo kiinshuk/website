@@ -4,7 +4,7 @@ body {
   color: #333;
   margin: 0;
   padding: 0;
-  background-color: #f8f8f8;
+  background-color: #f4f4f4;
   line-height: 1.6;
   text-align: center;
   overflow-x: hidden;
@@ -15,6 +15,7 @@ h1, h2, h3 {
   letter-spacing: 1px;
   margin-top: 0;
   text-align: center;
+  color: #333;
 }
 
 /* Section Base Styling */
@@ -31,18 +32,18 @@ section {
   background: linear-gradient(135deg, #0e1d28, #5980b6);
   text-align: center;
   padding: 100px 20px;
-  color: white;
+  color: #fff;
 }
 
 .hero h1 {
   font-size: 48px; /* Larger font size */
-  color: white;
+  color: #fff;
   margin-bottom: 20px;
 }
 
 .hero p {
   font-size: 18px; /* Slightly larger font size */
-  color: #f0f0f0;
+  color: #fff;
   margin-bottom: 30px;
 }
 
@@ -54,7 +55,7 @@ section {
   display: inline-block;
   margin: 10px;
   padding: 12px 25px;
-  background-color: #2980b9;
+  background-color: #1e88e5;
   color: white;
   border-radius: 50px;
   text-decoration: none;
@@ -63,47 +64,55 @@ section {
 }
 
 .hero .buttn a:hover {
-  background-color: #1a5276;
+  background-color: #1565c0;
 }
+
 .hero .socials a {
-  color: white;
+  color: #fff;
   margin: 0 10px;
   font-size: 30px;
   transition: all 0.3s ease;
 }
 
 .hero .socials a:hover {
-  color: #1a5276;
+  color: #1e88e5;
 }
 
-/* About Section */
 .about {
-  background-color: #fff;
+  background-color: #ffffff;
   padding: 80px 20px;
 }
 
 .about h2 {
-  font-size: 28px; /* Adjusted font size */
+  font-size: 28px;
   color: #333;
   margin-top: 20px;
 }
 
 .about p {
-  font-size: 16px; /* Adjusted font size */
-  color: #555;
+  font-size: 16px;
+  color: #666;
   max-width: 800px;
   margin: 0 auto;
   line-height: 1.8;
-  text-align: center; /* Center-align text */
+  text-align: center;
 }
 
 .experience-item {
   cursor: pointer;
   border-bottom: 1px solid #ddd;
-  padding: 10px;
+  padding: 15px;
   text-align: left;
   max-width: 800px;
   margin: 0 auto;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  position: relative;
+}
+
+.experience-item:hover {
+  background-color: #eee;
 }
 
 .experience-title {
@@ -111,33 +120,54 @@ section {
   color: #333;
   margin: 0;
   padding: 10px 0;
+  position: relative;
 }
 
 .toggle-icon {
-  float: right;
+  position: absolute;
+  right: 10px;
   font-size: 20px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease;
+  color: #333;
+}
+
+.experience-item.open .toggle-icon {
+  transform: rotate(180deg);
+  color: #1e88e5;
 }
 
 .experience-description {
   max-height: 0;
+  padding: 0 10px;
   overflow: hidden;
-  transition: max-height 0.5s ease-in-out;
+  transition: max-height 0.4s ease-out, opacity 0.4s ease-out;
+  opacity: 0;
 }
 
 .experience-item.open .experience-description {
-  max-height: 500px;
-  overflow: visible; /* Ensure content is visible */
-  /* Adds space between the title and the paragraph */
+  max-height: 200px; /* Adjust based on content; ensures a smoother transition */
+  opacity: 1;
+  padding: 10px;
 }
-.exp{
-  display:flex;
+
+.exp {
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
-
 }
+
 .experience-description p {
   margin: 10px 0;
+}
+
+.technology {
+  color: #1e88e5;
+  font-weight: bold;
+}
+
+.period {
+  font-style: italic;
+  color: #999;
 }
 
 /* Skills Section */
@@ -147,46 +177,51 @@ section {
 }
 
 .skills h2 {
-  font-size: 28px;
+  font-size: 2rem;
   color: #333;
   margin-bottom: 40px;
+  text-align: center;
 }
 
 .skills-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 10px;
-  max-width: 830px;
+  gap: 20px;
+  max-width: 960px;
   margin: 0 auto;
-  text-align: center;
 }
 
 .skill-card {
-  padding: 15px;
-  background-color: #fff;
-  border-radius: 10px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .skill-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 .skill-card img {
-  width: 40px;
-  margin-bottom: 10px;
+  width: 50px;
+  margin-bottom: 15px;
 }
 
 .skill-card h3 {
-  font-size: 16px;
+  font-size: 1.2rem;
   color: #333;
+  margin: 0;
 }
 
-/* Projects Section */
 .projects {
-  background-color: #fff;
+  background-color: #ffffff;
   padding: 80px 20px;
 }
 
@@ -201,15 +236,20 @@ section {
   overflow-x: auto; /* Enable horizontal scrolling */
   gap: 30px;
   padding: 10px 0;
-  /* scroll-snap-type:proximity; Optional: Snap to each card */
   scroll-behavior: smooth; /* Smooth scrolling */
+  -ms-overflow-style: none; /* Hide scrollbar in IE and Edge */
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+}
+
+.projects-container::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in Chrome, Safari, and newer Edge */
 }
 
 .project-card {
   flex: 0 0 auto; /* Prevent shrinking and ensure cards are inline */
   width: 300px; /* Adjust width as needed */
   padding: 20px;
-  background-color: #f5f5f5;
+  background-color: #f9f9f9;
   border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -224,8 +264,8 @@ section {
 
 .project-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  background-color: #e0e0e0; /* Lightly change the background color on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  background-color: #eee; /* Lightly change the background color on hover */
 }
 
 .project-image {
@@ -236,6 +276,7 @@ section {
   margin-bottom: 15px;
   transition: transform 0.3s ease;
 }
+
 .project-card:hover .project-image {
   transform: scale(1.05); /* Slight zoom effect on hover */
 }
@@ -248,7 +289,7 @@ section {
 }
 
 .project-card:hover h3 {
-  color: #007aff; /* Change text color on hover */
+  color: #1e88e5; /* Change text color on hover */
 }
 
 .project-card p {
@@ -265,7 +306,7 @@ section {
 .project-card a {
   display: inline-block;
   padding: 8px 15px;
-  background-color: #007aff;
+  background-color: #1e88e5;
   color: white;
   border-radius: 25px;
   text-decoration: none;
@@ -274,8 +315,26 @@ section {
 }
 
 .project-card a:hover {
-  background-color: #005bb5;
+  background-color: #1565c0;
   transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.tech-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.tech-item {
+  display: inline-block;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 2px;
+  font-size: 12px;
+  color: #333;
 }
 
 .see-more {
@@ -283,11 +342,7 @@ section {
   text-align: center;
   font-size: 16px;
   font-weight: bold;
-}
-
-/* Optional: Hide scrollbar for a cleaner look */
-.projects-container::-webkit-scrollbar {
-  display: none;
+  color: #333;
 }
 
 
@@ -298,61 +353,48 @@ section {
 }
 
 .contact h2 {
-  font-size: 28px; /* Adjusted font size */
+  font-size: 28px;
   color: #333;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
-.contact-form {
+.contact form {
   max-width: 600px;
   margin: 0 auto;
-  text-align: center; /* Center-align form */
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 15px;
-  margin-bottom: 20px;
-  border-radius: 8px;
+.contact form input, .contact form textarea {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 15px;
   border: 1px solid #ddd;
+  border-radius: 5px;
   font-size: 16px;
   color: #333;
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: #007aff;
-  box-shadow: 0 0 6px rgba(0, 122, 255, 0.2);
-}
-
-.contact-form button {
-  padding: 12px 25px;
-  background-color: #007aff;
+.contact form button {
+  padding: 10px 20px;
+  background-color: #1e88e5;
   color: white;
   border: none;
-  border-radius: 25px;
+  border-radius: 5px;
+  cursor: pointer;
   font-size: 16px;
   transition: background-color 0.3s ease;
 }
 
-.contact-form button:hover {
-  background-color: #005bb5;
+.contact form button:hover {
+  background-color: #1565c0;
 }
 
-/* Footer */
 .footer {
-  padding: 10px 20px;
   background-color: #333;
   color: white;
-  justify-content: center;
-  display: flex;
-}
-.footer a{
-  color: #333;
-}
-
-.footer p {
-  margin: 0;
-  font-size: 14px;
+  text-align: center;
+  height: 30px;
 }
