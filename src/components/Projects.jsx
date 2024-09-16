@@ -94,6 +94,22 @@ const Projects = () => {
             View on GitHub
           </a>
         </div>
+        <div className='project-card'>
+          <img src={require('../assets/Base64.png')} alt='Base64' className='project-image' />
+          <h3>Image to Base64 Converter</h3>
+          <p>
+          Created a simple tool to upload images and convert them into Base64 strings. Users can also 
+          convert Base64 strings back into downloadable image files. Ideal for quick conversions in web development.
+          </p>
+          <ul className='tech-list'>
+            <li className='tech-item'>Express</li>
+            <li className='tech-item'>Multer</li>
+            <li className='tech-item'>Node.js</li>
+          </ul>
+          <a href='https://github.com/kiinshuk/ImageToBase64' target='_blank' rel='noopener noreferrer' className='btn btn-primary'>
+            View on GitHub
+          </a>
+        </div>
       </div>
       <div className='see-more'>
         <a href='https://github.com/kiinshuk'>See More</a>
