@@ -236,13 +236,36 @@ section {
   overflow-x: auto; /* Enable horizontal scrolling */
   gap: 30px;
   padding: 10px 0;
-  scroll-behavior: smooth; /* Smooth scrolling */
-  -ms-overflow-style: none; /* Hide scrollbar in IE and Edge */
-  scrollbar-width: none; /* Hide scrollbar in Firefox */
+  /* Smooth scrolling for modern browsers */
+  scroll-behavior: smooth;
+
+  /* Show scrollbar in IE and Edge */
+  -ms-overflow-style: scrollbar;
+  
+  /* Show scrollbar in Firefox */
+  scrollbar-width: thin;
+  
+  }
+  .projects-container::-webkit-scrollbar {
+  display: block; /* Show scrollbar in Chrome, Safari, and newer Edge */
+  }
+  /* Style the scrollbar in WebKit-based browsers */
+.projects-container::-webkit-scrollbar {
+  width: 8px; /* Set width of the scrollbar */
+  height: 8px; /* Set height of the scrollbar */
 }
 
-.projects-container::-webkit-scrollbar {
-  display: none; /* Hide scrollbar in Chrome, Safari, and newer Edge */
+.projects-container::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Scrollbar track background */
+}
+
+.projects-container::-webkit-scrollbar-thumb {
+  background: #888; /* Scrollbar thumb color */
+  border-radius: 4px; /* Round the corners of the scrollbar thumb */
+}
+
+.projects-container::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Darken scrollbar thumb on hover */
 }
 
 .project-card {
