@@ -23,7 +23,7 @@ section {
   padding: 80px 20px;
   position: relative;
   clear: both;
-  overflow: visible; /* Allow overflow for expanding sections */
+  overflow: visible;
   text-align: center;
 }
 
@@ -36,14 +36,13 @@ section {
 }
 
 .hero h1 {
-  font-size: 48px; /* Larger font size */
+  font-size: 48px;
   color: #fff;
   margin-bottom: 20px;
 }
 
 .hero p {
-  font-size: 18px; /* Slightly larger font size */
-  color: #fff;
+  font-size: 18px;
   margin-bottom: 30px;
 }
 
@@ -78,9 +77,11 @@ section {
   color: #1e88e5;
 }
 
+/* About Section */
 .about {
   background-color: #ffffff;
-  padding: 80px 20px;
+  padding: 80px 15px;
+  text-align: center;
 }
 
 .about h2 {
@@ -90,21 +91,21 @@ section {
 }
 
 .about p {
-  font-size: 16px;
+  font-size: 18px;
   color: #666;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 20px auto;
   line-height: 1.8;
-  text-align: center;
 }
 
+/* Experience Section */
 .experience-item {
   cursor: pointer;
   border-bottom: 1px solid #ddd;
-  padding: 15px;
+  padding: 20px;
   text-align: left;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 30px auto;
   background-color: #f9f9f9;
   border-radius: 8px;
   transition: background-color 0.3s ease;
@@ -126,7 +127,9 @@ section {
 .toggle-icon {
   position: absolute;
   right: 10px;
-  font-size: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
   transition: transform 0.3s ease, color 0.3s ease;
   color: #333;
 }
@@ -145,19 +148,21 @@ section {
 }
 
 .experience-item.open .experience-description {
-  max-height: 200px; /* Adjust based on content; ensures a smoother transition */
+  max-height: 300px;
   opacity: 1;
   padding: 10px;
 }
 
 .exp {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
 }
 
 .experience-description p {
   margin: 10px 0;
+  line-height: 1.6;
 }
 
 .technology {
@@ -168,6 +173,48 @@ section {
 .period {
   font-style: italic;
   color: #999;
+  margin-right: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  section {
+    padding: 50px 15px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .hero .buttn a {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .about h2 {
+    font-size: 24px;
+  }
+
+  .about p {
+    font-size: 16px;
+  }
+
+  .experience-title {
+    font-size: 18px;
+  }
+
+  .experience-item {
+    padding: 15px;
+  }
+
+  .exp {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 /* Skills Section */
@@ -180,7 +227,6 @@ section {
   font-size: 2rem;
   color: #333;
   margin-bottom: 40px;
-  text-align: center;
 }
 
 .skills-container {
@@ -201,7 +247,6 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 .skill-card:hover {
@@ -217,113 +262,104 @@ section {
 .skill-card h3 {
   font-size: 1.2rem;
   color: #333;
-  margin: 0;
 }
 
+/* Projects Section */
 .projects {
   background-color: #ffffff;
   padding: 80px 20px;
 }
 
 .projects h2 {
-  font-size: 28px; /* Adjusted font size */
+  font-size: 28px;
   color: #333;
   margin-bottom: 40px;
 }
 
 .projects-container {
   display: flex;
-  overflow-x: auto; /* Enable horizontal scrolling */
+  overflow-x: auto;
   gap: 30px;
   padding: 10px 0;
-  /* Smooth scrolling for modern browsers */
   scroll-behavior: smooth;
-
-  /* Show scrollbar in IE and Edge */
   -ms-overflow-style: scrollbar;
-  
-  /* Show scrollbar in Firefox */
   scrollbar-width: thin;
-  
-  }
-  .projects-container::-webkit-scrollbar {
-  display: block; /* Show scrollbar in Chrome, Safari, and newer Edge */
-  }
-  /* Style the scrollbar in WebKit-based browsers */
+}
+
 .projects-container::-webkit-scrollbar {
-  width: 8px; /* Set width of the scrollbar */
-  height: 8px; /* Set height of the scrollbar */
+  display: block;
+  width: 8px;
+  height: 8px;
 }
 
 .projects-container::-webkit-scrollbar-track {
-  background: #f1f1f1; /* Scrollbar track background */
+  background: #f1f1f1;
 }
 
 .projects-container::-webkit-scrollbar-thumb {
-  background: #888; /* Scrollbar thumb color */
-  border-radius: 4px; /* Round the corners of the scrollbar thumb */
+  background: #888;
+  border-radius: 4px;
 }
 
 .projects-container::-webkit-scrollbar-thumb:hover {
-  background: #555; /* Darken scrollbar thumb on hover */
+  background: #555;
 }
 
 .project-card {
-  flex: 0 0 auto; /* Prevent shrinking and ensure cards are inline */
-  width: 300px; /* Adjust width as needed */
+  flex: 0 0 auto;
+  width: 300px;
   padding: 20px;
   background-color: #f9f9f9;
   border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  position: relative; /* Required for hover effects */
-  overflow: hidden; /* Ensure content stays within the card */
-  scroll-snap-align: start; /* Optional: Align cards to the start */
+  position: relative;
+  overflow: hidden;
+  scroll-snap-align: start;
 }
 
 .project-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  background-color: #eee; /* Lightly change the background color on hover */
+  background-color: #eee;
 }
 
 .project-image {
-  width: 100%; /* Ensure image takes full width of its container */
-  height: 200px; /* Set a fixed height for all images */
-  object-fit: cover; /* Ensures the image covers the area without stretching */
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
   border-radius: 10px;
   margin-bottom: 15px;
   transition: transform 0.3s ease;
 }
 
 .project-card:hover .project-image {
-  transform: scale(1.05); /* Slight zoom effect on hover */
+  transform: scale(1.05);
 }
 
 .project-card h3 {
-  font-size: 20px; /* Adjusted font size */
+  font-size: 20px;
   color: #333;
   margin-bottom: 10px;
   transition: color 0.3s ease;
 }
 
 .project-card:hover h3 {
-  color: #1e88e5; /* Change text color on hover */
+  color: #1e88e5;
 }
 
 .project-card p {
-  font-size: 14px; /* Adjusted font size */
+  font-size: 14px;
   color: #666;
   margin-bottom: 15px;
   transition: color 0.3s ease;
 }
 
 .project-card:hover p {
-  color: #333; /* Darken text color on hover */
+  color: #333;
 }
 
 .project-card a {
@@ -333,41 +369,15 @@ section {
   color: white;
   border-radius: 25px;
   text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  font-size: 14px;
+  transition: background-color 0.3s ease;
 }
 
 .project-card a:hover {
   background-color: #1565c0;
-  transform: scale(1.05); /* Slight zoom effect on hover */
 }
-
-.tech-list {
-  list-style-type: none;
-  padding: 0;
-  margin: 10px 0;
-  font-size: 14px;
-  color: #666;
-}
-
-.tech-item {
-  display: inline-block;
-  background-color: #f1f1f1;
-  border-radius: 5px;
-  padding: 5px 10px;
-  margin: 2px;
-  font-size: 12px;
-  color: #333;
-}
-
-.see-more {
-  margin-top: 20px;
+.see-more{
   text-align: center;
-  font-size: 16px;
-  font-weight: bold;
-  color: #333;
 }
-
 
 /* Contact Section */
 .contact {
@@ -381,43 +391,106 @@ section {
   margin-bottom: 40px;
 }
 
-.contact form {
+.contact-form {
   max-width: 600px;
   margin: 0 auto;
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.contact form input, .contact form textarea {
-  width: calc(100% - 20px);
-  padding: 10px;
-  margin-bottom: 15px;
+.contact-form input,
+.contact-form textarea {
+  padding: 15px;
   border: 1px solid #ddd;
-  border-radius: 5px;
+  border-radius: 8px;
   font-size: 16px;
-  color: #333;
+  width: 100%;
 }
 
-.contact form button {
-  padding: 10px 20px;
+.contact-form button {
+  padding: 15px;
   background-color: #1e88e5;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 50px;
   cursor: pointer;
-  font-size: 16px;
   transition: background-color 0.3s ease;
 }
 
-.contact form button:hover {
+.contact-form button:hover {
   background-color: #1565c0;
 }
 
-.footer {
+/* Footer */
+footer {
   background-color: #333;
   color: white;
-  text-align: center;
-  height: 30px;
+  padding: 20px;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  section {
+    padding: 50px 15px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .hero .buttn a {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .about h2 {
+    font-size: 24px;
+  }
+
+  .about p {
+    font-size: 16px;
+  }
+
+  .experience-title {
+    font-size: 18px;
+  }
+
+  .experience-item {
+    padding: 15px;
+  }
+
+  .exp {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .skills h2 {
+    font-size: 24px;
+  }
+
+  .projects h2 {
+    font-size: 24px;
+  }
+
+  .project-card {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .contact h2 {
+    font-size: 24px;
+  }
+
+  .contact-form button {
+    font-size: 16px;
+  }
 }
